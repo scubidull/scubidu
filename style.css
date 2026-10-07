@@ -33,7 +33,7 @@ body{margin:0;min-height:100vh;background:var(--bg);display:flex;align-items:cen
 .main{display:grid;grid-template-columns:1fr 210px;border-top:3px solid #111}
 .screen{padding:16px;border-right:3px solid #111}
 
-.card{background:var(--panel);border:3px solid var(--frame);border-radius:26px;padding:20px;min-height:290px;display:grid;grid-template-columns:150px 1fr;gap:18px;position:relative;overflow:hidden;box-shadow:inset 0 0 0 4px var(--panel),inset 0 0 0 6px #4b639f33}
+.card{background:var(--panel);border:3px solid var(--frame);border-radius:26px;padding:20px;height:300px;grid-template-rows:minmax(0,1fr);display:grid;grid-template-columns:150px 1fr;gap:18px;position:relative;overflow:hidden;box-shadow:inset 0 0 0 4px var(--panel),inset 0 0 0 6px #4b639f33}
 
 .pic{aspect-ratio:3/4;border:4px solid var(--frame);border-radius:18px;box-shadow:5px 5px 0 var(--frame-shadow);transform:rotate(-2deg);overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:6px;padding:6px;font-size:48px;background:linear-gradient(160deg,var(--ph-a),var(--ph-b));transition:transform .25s}
 .pic:hover{transform:rotate(0deg) scale(1.03)}
@@ -73,6 +73,11 @@ p.t{margin:0;font-size:15px;line-height:1.55}
 .social:hover{background:var(--accent);border-color:var(--accent);transform:translateY(-3px) rotate(-6deg)}
 .social.vazio{opacity:.55}
 
+.pic{align-self:start}
+.card>.c:last-child{min-height:0;overflow-y:auto;padding-right:6px;scrollbar-width:thin;scrollbar-color:var(--frame) transparent}
+.card>.c:last-child::-webkit-scrollbar{width:5px}
+.card>.c:last-child::-webkit-scrollbar-thumb{background:var(--frame);border-radius:99px}
+
 @media(max-width:640px){
   body{padding:10px}
   .by{font-size:14px;margin-bottom:6px}
@@ -83,7 +88,7 @@ p.t{margin:0;font-size:15px;line-height:1.55}
   .tab{font-size:9px;padding:7px 1px 15px;background-size:100% 12px}
   .main{grid-template-columns:1fr 76px}
   .screen{padding:8px;border-right-width:2px}
-  .card{grid-template-columns:96px 1fr;gap:10px;padding:12px;min-height:200px;border-width:2px;border-radius:18px}
+  .card{grid-template-columns:96px 1fr;gap:10px;padding:12px;height:240px;border-width:2px;border-radius:18px}
   .pic{aspect-ratio:3/4;border-width:3px;border-radius:12px;box-shadow:3px 3px 0 var(--frame-shadow);padding:4px;font-size:30px}
   .pic img{width:calc(100% + 8px);height:calc(100% + 8px);margin:-4px}
   .pic small{font-size:8px}
