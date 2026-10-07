@@ -1,0 +1,3 @@
+Coloque suas fotos nesta pasta com estes nomes (ou mude os nomes no script.js):
+foto1.jpg, foto2.jpg, foto3.jpg, foto4.jpg, foto5.jpg, foto6.jpg
+Tamanho ideal: 600 x 800 px (vertical, proporção 3:4).
